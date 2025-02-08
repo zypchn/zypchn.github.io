@@ -12,7 +12,7 @@ Hesaplamalı nörobilim hakkında yazılar paylaşacağım serimin ilk yazısın
 Keyifli okumalar!
 
 ## Beynin Bölgeleri
-İnsan beyni ortalama 1400-1500 gram ağırlıktadır, bu da toplam vücut ağırlığının %2'sine denk gelmektedir. Buna rağmen vücudumuza giren oksijenin %20 kadarını harcıyor. Harcadığı enerjiyle önemli şeyler yapıyor olmalı, değil mi? 
+İnsan beyni ortalama 1400-1500 gram ağırlıktadır, bu da toplam vücut ağırlığının %2'sine denk gelmektedir. Buna rağmen vücudumuza giren oksijenin %20 kadarını harcıyor. Harcadığı enerjiyle bakılırsa önemli şeyler yapıyor olmalı, değil mi? 
 Beyin her ne kadar tek bir organ olsa da onu tek bir işleve indirgemek yanlıştır. Onun yerine beyni bölgesel olarak incelemek daha doğrudur. Aşağıdaki şemaya bakarak beynin ana bölgelerini tanıyalım:
 ![beyin-sema](https://www.dunyadanismanlikmerkezi.com/wp-content/uploads/2022/07/beyin-bolgeleri.jpg)
 
