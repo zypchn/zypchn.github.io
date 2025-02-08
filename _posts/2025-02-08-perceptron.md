@@ -1,3 +1,12 @@
+---
+title: Perceptron
+date: 2025-02-01
+categories: [Computational Neuroscience]
+tags: [perceptron]
+description: Tek katmanlı Perceptron modeline giriş
+toc: false
+---
+
 
 # Biyolojik Nöronlardan Yapay Sinir Ağlarına : Perceptron
 
@@ -82,7 +91,7 @@ $= (-8) + (10) + (4.9) + (0.5) = 7.4$
 Daha sonra elde ettiğimiz değeri $H(z)$ basamak fonksiyonuna verelim:
 $$0 \quad if \quad z < 8 \brace 
 1 \quad if \quad z \geq 8$$
-Buradan, $H(7.4) = 0$ değeri geliyor.  Sonuç olarak *hayır* cevabını alıyoruz, bye Charizard :cry:
+Buradan, $H(7.4) = 0$ değeri geliyor.  Sonuç olarak *hayır* cevabını alıyoruz, bye Charizard 😭
 
 Burada optimal parametreleri önceden bildiğimiz için modelimiz direkt karar verebildi. Peki parametreleri nasıl bulduk? Bunun için Perceptron'un eğitim sürecine bakmamız lazım.
 
@@ -234,9 +243,9 @@ Doğruluk değeri yine parametre ve verilerin rassallığından dolayı sizde fa
 
 <br/>
 
-Okuduğunuz için teşekkür ederim :nerd_face: <br/>
+Okuduğunuz için teşekkür ederim 🤓 <br/>
 Bir sonraki yazımda biyolojik nöronları daha gerçekçi bir şekilde uygulamaya koyan modellerden bahsedeceğim. <br/>
-Görüşmek üzere :wave:
+Görüşmek üzere 👋
 
 <br/>
 <br/>
