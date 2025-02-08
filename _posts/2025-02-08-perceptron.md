@@ -5,6 +5,8 @@ Merhaba!
 [Önceki yazımın](https://zypchn.github.io/posts/intro-to-brain-science/) devamı olan bu yazıda, biyolojik nöronlardan ilham alınarak tasarlanan Perceptron modelinden bahsedeceğim. Bu yazıdan sonra hesaplamalı nörobilime giriş yapacağımız için öncesinde yapay sinir ağlarının temel birimi hakkında bilgi sahibi olunması gerektiğini düşünüyorum.
 Keyifli okumalar!
 
+<br/>
+
 ## Perceptron Nedir?
 Perceptron, tek katmanlı bir yapay sinir ağının temel birimi olan denetimli bir öğrenme algoritmasıdır. İkili sınıflandırma için uygundur, yani giriş değerlerini iki kategoriye ayırır: 0/1 veya -1/1 (kaynaklarda farklılık göstermektedir).
 
@@ -16,6 +18,8 @@ Perceptron algoritması ikiye ayrılır:
 2. **Çok-Katmanlı Perceptron** : Birden çok Perceptron katmanı içerdiği için veri işlem yeteneği daha yüksektir. Verideki daha karmaşık ilişkileri çözebilir.
 
 Ben bu yazımda Tek-Katmanlı Perceptron modeli üzerinden ilerleyeceğim.
+
+<br/>
 
 ## Perceptron'un Bileşenleri
 Bir yapay sinir ağı dört adet bölümden oluşmaktadır: giriş değerleri (input features), ağırlıklar ve sapma (weights and bias), ağırlıklı toplam (weighted sum) ve aktivasyon fonksiyonu (activation function). Bu bileşenleri daha yakından inceleyelim:
@@ -45,10 +49,12 @@ Perceptron modelinin bileşenlerini öğrendik, bir de görsel olarak nasıl mod
 Tasarım size de tanıdık gelmedi mi? Sanki şuna benziyor:
 ![neuron](https://doktorfizik.com/wp-content/uploads/2019/12/n%C3%B6ron.png)
 
-İki görseli birleştirecek olursak:
+İki görseli birleştirecek olursak: <br/>
 ![neuron + perceptron](https://miro.medium.com/v2/resize:fit:828/format:webp/1*FLoEcD4bWRw6Zno32uFwuw.png)
 
 Gördüğünüz gibi Perceptron ve biyolojik nöronlar tasarım olarak oldukça benziyor. 
+
+<br/>
 
 ## Perceptron Nasıl Çalışır : Örnek Senaryo
 Yukarıda anlatılanları pekiştirmek için gerçek dünyadan bir senaryoyla örnek verelim. Diyelim ki bir giyim mağazasındasınız. Üzerinde en sevdiğiniz Pokemon'un çizimi olan bir tişört var ve onu alıp almayacağınıza karar vermek istiyorsunuz. Beyniniz *evet* ya da *hayır* olarak karar verecektir, yani *1* veya *0*. Karar verebilmeniz için her özelliğin bir değeri ve ağırlığı olmalıdır, bunun için aşağıdaki tablolara bakalım:
@@ -78,7 +84,9 @@ $$0 \quad if \quad z < 8 \brace
 1 \quad if \quad z \geq 8$$
 Buradan, $H(7.4) = 0$ değeri geliyor.  Sonuç olarak *hayır* cevabını alıyoruz, bye Charizard :cry:
 
-Burada optimal parametreleri önceden bildiğimiz için modelimiz direkt karar verebildi. Peki ya parametreleri nasıl bulduk? Bunun için Perceptron'un eğitim sürecine bakmamız lazım.
+Burada optimal parametreleri önceden bildiğimiz için modelimiz direkt karar verebildi. Peki parametreleri nasıl bulduk? Bunun için Perceptron'un eğitim sürecine bakmamız lazım.
+
+<br/>
 
 ## Perceptron Eğitim Süreci : Kod Örneği
 
@@ -193,25 +201,25 @@ Perceptron sınıfımızı oluşturduk. Şimdi objemizi ve maliyet (cost) fonksi
 			# Güncellenen parametreleri modele geri gönderiyoruz
 			perceptron.linear.weight = nn.Parameter(w)
 			perceptron.linear.bias = nn.Parameter(b)
-	print('Epoch [{}/{}], weight:{}, bias:{} Loss: {:.4f}'.format(
-	        epoch+1,num_epochs,
-	        w.detach().numpy(),
-	        b.detach().numpy(),
-	        Losses.item()))
+	  print('Epoch [{}/{}], weight:{}, bias:{} Loss: {:.4f}'.format(
+	      epoch+1,num_epochs,
+	      w.detach().numpy(),
+	      b.detach().numpy(),
+	      Losses.item()))
 
-> Epoch [1/10], weight:[[0.6278487 0.24864984]], bias:[-0.08365549] Loss: -82.0000 
-> Epoch [2/10], weight:[[0.6140272 0.10244947]], bias:[-0.05165547] Loss: -32.0000 
-> Epoch [3/10], weight:[[0.5870175 0.0165318]], bias:[-0.0316555] Loss: -20.0000 
-> Epoch [4/10], weight:[[ 0.558535 -0.04593931]], bias:[-0.0236555] Loss: -8.0000 
-> Epoch [5/10], weight:[[ 0.5315978 -0.08121765]], bias:[-0.0216555] Loss: -2.0000 
-> Epoch [6/10], weight:[[ 0.5053688 -0.11094457]], bias:[-0.0216555] Loss: 0.0000 
-> Epoch [7/10], weight:[[ 0.48110715 -0.1318747 ]], bias:[-0.0186555] Loss: -3.0000 
-> Epoch [8/10], weight:[[ 0.45835102 -0.14691873]], bias:[-0.0166555] Loss: -2.0000 
-> Epoch [9/10], weight:[[ 0.43633538 -0.15988223]], bias:[-0.0126555] Loss: -4.0000 
-> Epoch [10/10], weight:[[ 0.41519952 -0.17041822]], bias:[-0.0106555] Loss: -2.0000
+> Epoch [1/10], weight:[[0.6278487 0.24864984]], bias:[-0.08365549] Loss: -82.0000 <br/>
+> Epoch [2/10], weight:[[0.6140272 0.10244947]], bias:[-0.05165547] Loss: -32.0000 <br/>
+> Epoch [3/10], weight:[[0.5870175 0.0165318]], bias:[-0.0316555] Loss: -20.0000 <br/>
+> Epoch [4/10], weight:[[0.558535 -0.04593931]], bias:[-0.0236555] Loss: -8.0000 <br/>
+> Epoch [5/10], weight:[[0.5315978 -0.08121765]], bias:[-0.0216555] Loss: -2.0000 <br/>
+> Epoch [6/10], weight:[[0.5053688 -0.11094457]], bias:[-0.0216555] Loss: 0.0000 <br/>
+> Epoch [7/10], weight:[[0.48110715 -0.1318747 ]], bias:[-0.0186555] Loss: -3.0000 <br/>
+> Epoch [8/10], weight:[[0.45835102 -0.14691873]], bias:[-0.0166555] Loss: -2.0000 <br/>
+> Epoch [9/10], weight:[[0.43633538 -0.15988223]], bias:[-0.0126555] Loss: -4.0000 <br/>
+> Epoch [10/10], weight:[[0.41519952 -0.17041822]], bias:[-0.0106555] Loss: -2.0000 <br/>
 
 
-Burada tüm epoch'lar için model ağırlıkları, sapma ve kayıp (loss) değerlerini görebilirsiniz. (Veri seti ve parametreler rastgele oluşturulduğu için alacağınız çıktı farklılık gösterebilir)
+Burada tüm epoch'lar için model ağırlıkları (weight), sapma (bias) ve kayıp (loss) değerlerini görebilirsiniz. (Veri seti ve parametreler rastgele oluşturulduğu için alacağınız çıktı farklılık gösterebilir.)
 
 Modelimiz eğitildiğine göre test aşamasına geçebiliriz. Hatırlarsanız en başta veri setimizin %20'sini ayırmıştık. Şimdi onu kullanacağız:
 
@@ -226,8 +234,8 @@ Doğruluk değeri yine parametre ve verilerin rassallığından dolayı sizde fa
 
 <br/>
 
-Okuduğunuz için teşekkür ederim :nerd_face:
-Bir sonraki yazımda biyolojik nöronları daha gerçekçi bir şekilde uygulamaya koyan modellerden bahsedeceğim. 
+Okuduğunuz için teşekkür ederim :nerd_face: <br/>
+Bir sonraki yazımda biyolojik nöronları daha gerçekçi bir şekilde uygulamaya koyan modellerden bahsedeceğim. <br/>
 Görüşmek üzere :wave:
 
 <br/>
