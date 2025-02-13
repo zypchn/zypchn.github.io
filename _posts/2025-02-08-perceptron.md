@@ -1,6 +1,6 @@
 ---
 title: Perceptron
-date: 2025-02-01
+date: 2025-02-08
 categories: [Computational Neuroscience]
 tags: [perceptron]
 description: Tek katmanlı Perceptron modeline giriş
@@ -46,11 +46,11 @@ Ağırlıklar, algoritmanın eğitim süresi boyunca değiştirilerek optimal de
 $z = w_1x_1 + w_2x_2 + w_3x_3 + ..., w_nx_n$
 
 **Aktivasyon Fonksiyonu :** Ağırlıklı toplamda elde edilen değeri girdi olarak alır ve çıkış değerini verir. 
-Aktivasyon fonksiyonu problemden probleme veya algoritmadan algoritmaya değişiklik gösterebilir. Perceptronlar, *Heaviside Basamak Fonksiyonu'nu (binary step)* kullanmaktadır ve şöyle tanımlanmıştır:
-$$ 0 \quad if \quad z < Threshold \brace 
+Aktivasyon fonksiyonu problemden probleme veya algoritmadan algoritmaya değişiklik gösterebilir. Perceptronlar, *Heaviside Basamak Fonksiyonu'nu (binary step)* kullanmaktadır ve şöyle tanımlanmıştır: 
+$$0 \quad if \quad z < Threshold \brace 
 1 \quad if \quad z \geq Threshold$$
 
-Buradaki $z$ ağırlıklı toplamı, $Threshold$ ise eşik değerini ifade etmektedir. Eşik değer probleme göre değişiklik gösterebilir.
+Buradaki *z* ağırlıklı toplamı, *Threshold* ise eşik değerini ifade etmektedir. Eşik değer probleme göre değişiklik gösterebilir.
 
 Perceptron modelinin bileşenlerini öğrendik, bir de görsel olarak nasıl modellendiğine bakalım:
 ![perceptron](https://media.geeksforgeeks.org/wp-content/uploads/20221219111343/Single-Layer-Perceptron.png)
@@ -185,7 +185,7 @@ Perceptron sınıfımızı oluşturduk. Şimdi objemizi ve maliyet (cost) fonksi
 
 <br/>
 
-Şimdi eğitim aşamasına geçebiliriz. Bunun için *öğrenim değeri (learning rate / step size)* ile epoch sayısı değerlerini tanımlayalım ve ardından eğitim döngümüzü yazalım:
+Şimdi eğitim aşamasına geçebiliriz. Bunun için *öğrenim değeri (learning rate / step size)* ile *epoch sayısı* değerlerini tanımlayalım ve ardından eğitim döngümüzü yazalım:
 
     learning_date = 1e-3 	# 0.001
     num_epochs = 10
